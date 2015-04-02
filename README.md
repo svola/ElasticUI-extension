@@ -28,10 +28,10 @@ http://getbootstrap.com/components/#media
 
 https://github.com/zachsnow/ng-elif
 
->**New features in the template**
->
-> - SignificantTerms aggregation
-> - Sort using buttons (Could be enhanced)
+New features in the template
+
+ - SignificantTerms aggregation
+ - Sort using buttons (Could be enhanced)
 
 TODO:
  
@@ -46,6 +46,14 @@ The main part of the project is borrowed from ElasticUI, so that's where a lot o
 https://github.com/YousefED/ElasticUI
 
 I just wanted to make a template which has more features builtin in the template, so it could already be used as search-engine and needs just some design enhancements and configuration of queries to use in the backend. 
+
+
+Setup
+----------
+
+Just edit js/app.js and enter your ElasticSearch-Host and index-name.
+Then edit demo.html and change all your field-names accordingly.
+
 
 Queries
 ----------
@@ -81,11 +89,11 @@ A terms facet of an analyzed field, will show you the analyzed tokens.
 
 Which looks like this:
 
-facet-bad.png
+![alt tag](https://raw.github.com/svola/ElasticUI-extension/master/doku/facet-bad.png)
 
 What you want instead, is usually this:
 
-facet-good.png
+![alt tag](https://raw.github.com/svola/ElasticUI-extension/master/doku/doku/facet-good.png)
 
 And for this you need to configure your mapping accordingly, before creating the index:
 
