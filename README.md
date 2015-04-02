@@ -93,7 +93,7 @@ Which looks like this:
 
 What you want instead, is usually this:
 
-![alt tag](https://raw.github.com/svola/ElasticUI-extension/master/doku/doku/facet-good.png)
+![alt tag](https://raw.github.com/svola/ElasticUI-extension/master/doku/facet-good.png)
 
 And for this you need to configure your mapping accordingly, before creating the index:
 
