@@ -134,3 +134,8 @@ Browser-compatibility
 
 The app currently works with Chromium (41.xx on Ubuntu), but not with Firefox (36.xxon Ubuntu).
 
+
+Demo
+----
+
+![alt tag](https://raw.github.com/svola/ElasticUI-extension/master/doku/demo.png)
