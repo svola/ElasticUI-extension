@@ -1,7 +1,8 @@
-ElasticUI++ 
-===============
+ElasticUI-extension
+==================
 
 ElasticUI is an awesome and very easy to setup framework that enables faceted navigation for ElasticSearch, written in AngularJS.
+
 This is basically just an extension to the demo-template.
 
 
