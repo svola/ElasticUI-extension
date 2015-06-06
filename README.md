@@ -34,9 +34,6 @@ New features in the template
  - SignificantTerms aggregation
  - Sort using buttons (Could be enhanced)
 
-TODO:
- 
-- Make it mobile-friendly
 
 
 Documentation

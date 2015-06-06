@@ -11,6 +11,13 @@
     border-right: 1px solid #eee;
 }
 
+#sidebarButton {
+    z-index: 1;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
 .media-left img {
     width: 100px;
 }
