@@ -135,7 +135,13 @@ Browser-compatibility
 The app currently works with Chromium (41.xx on Ubuntu), but not with Firefox (36.xxon Ubuntu).
 
 
-Demo
+Demo Basic Bootstrap template
 ----
 
 ![alt tag](https://raw.github.com/svola/ElasticUI-extension/master/doku/demo.png)
+
+
+Demo Materialize template
+----
+![alt tag](https://raw.github.com/svola/ElasticUI-extension/master/doku/demo-materialize1.png)
+![alt tag](https://raw.github.com/svola/ElasticUI-extension/master/doku/demo-materialize2.png)
