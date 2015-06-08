@@ -3,7 +3,9 @@ ElasticUI-extension
 
 ElasticUI is an awesome and very easy to setup framework that enables faceted navigation for ElasticSearch, written in AngularJS.
 
-This is basically just an extension to the demo-template.
+There are 2 templates available: one is very basic and built on top of Twitter-Bootstrap and another one is built on top of Materialize-CSS.
+
+http://materializecss.com/
 
 
 http://www.elasticui.com/

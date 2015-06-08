@@ -1,0 +1,51 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+}
+
+#sidebarButton {
+    z-index: 1;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+.media-left img {
+    width: 100px;
+}
+
+/** From calaca.css */
+
+.result {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 10px solid #ecf0f1;
+}
+
+.result h2 {
+  font-size: 20px;
+  color: #ed4877;
+  margin-bottom: 5px;
+}
+
+
+/** Bootrtrap **/
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.form-control {
+    width: 200px;
+}
