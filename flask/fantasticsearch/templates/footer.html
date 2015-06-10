@@ -1,0 +1,13 @@
+{% if term or level %}
+<div class="scroll">
+	{% if page %}  	
+	{% set i = page %}
+	{% else %}
+	{% set i = 1 %}
+	{% endif %}
+	<a id="moreResults"  href="/search?term={{term}}&level={{level}}&page={{i}}&filter={{filters}}">
+		<button type="button" class="btn btn-default navbar-btn">Next</button>
+	</a>
+</div>
+{% endif %}
+

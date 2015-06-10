@@ -1,0 +1,33 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+.card .card-image img {
+      border-radius: 2px 2px 0 0;
+      position: relative;
+      left: 20%;
+      right: 0;
+      top: 10px;
+      bottom: 0;
+      width: 106px;
+}
+    
+
+.card .card-title {
+      font-size: 18px;	
+}
+
+
+
+
+label {
+  font-size: 1.2rem;
+}
+
+
+

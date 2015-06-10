@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>coLibri Search</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">      
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js" type='text/javascript'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" type='text/javascript'></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+
+<body>
+<div id="content">
+
+{% include 'header.html' %}
+
+{% include 'container.html' %}
+
+{% include 'footer.html' %}
+
+</div>
+
+
+</body>
+</html>
+
+
