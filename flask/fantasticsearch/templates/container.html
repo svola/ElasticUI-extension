@@ -1,35 +1,35 @@
 {% if results %}
 
-<div id="container">
 <div class="container-fluid">
 	<div class="row">
 	<div id="sidebar" class="col s12 m4 l3">
 
-    	<h4>Level</h4>
+    	<h4>FIELD 1</h4>
 	<ul class="nav nav-list">
 	    {% for bucket in results.aggregations.level.buckets %}
 	     <li>
 		<label class="checkbox">
 		    <input type="checkbox" id="level-{{bucket.key}}">
-		    <label for="level-{{bucket.key}}">{{bucket.key}} ({{bucket.doc_count}})</label>
+		    <!-- TODO: Enter your field-name-->	
+		    <label for="field1-{{bucket.key}}">{{bucket.key}} ({{bucket.doc_count}})</label>
 		</label>
 	    </li>
 	   {% endfor %}
 	</ul>
 
-	<h4>MediaType</h4>
+	<h4>Field 2</h4>
 	<ul class="nav nav-list">
 	    {% for bucket in results.aggregations.mediaType.buckets %}
 	     <li>
 		<label class="checkbox">
 		    <input type="checkbox" id="mediaType-{{bucket.key}}">
-		    <label for="mediaType-{{bucket.key}}">{{bucket.key}} ({{bucket.doc_count}})</label>
+		    <!-- TODO: Enter your field-name -->	
+		    <label for="field2-{{bucket.key}}">{{bucket.key}} ({{bucket.doc_count}})</label>
 		</label>
 	    </li>
 	   {% endfor %}
 	</ul>
 </div>
-
 
 
 <div class="col s12 m8 l9 teal lighten-2"> 
@@ -45,7 +45,7 @@
 <div id="container" class="row">
 {% for doc in results.hits.hits %}
 <div class="col s10 m6 l4">	
-	<div class="card small teal lighten-5"><!-- TODO: Change accordingly to your fieldnames-->
+	<div class="card small teal lighten-5"><!-- TODO: Change title and imageUrl accordingly to your fieldnames-->
 		<div class="card-image waves-effect waves-block waves-light">
 			<img class="activator" src={{doc._source.imageUrl}} alt="{{doc._source.title}}">
 		</div>
@@ -56,16 +56,11 @@
 
 	  	<div class="card-reveal">
 	      		<span class="card-title grey-text text-darken-4">{{doc._source.title}}<i class="mdi-navigation-close right"></i></span>
-			<p>{{doc._source.author}}</p>
-			<p>Level: {{doc._source.level}}</p>		      	
-			<p>Known vocabulary: {{100 - doc._source.unknownVoc}} %</p>		      	
 			<a target="_blank" href="{{doc._source.link}}">Link</a>                      
 		</div>
 	</div>
 </div>
 {% endfor %}
-{% endif %}
-</div>
 
-</div>
+{% endif %}
 

@@ -7,58 +7,54 @@ $(document).ready(function() {
 });
 
 
+
+function getFiltersFromDom(){
+	var filters = [];
+	
+	var checkboxes = document.getElementsByClassName('checkbox');
+	for (i = 0; i < checkboxes.length; i++){
+		var checkbox = checkboxes[i];
+		var input = checkbox.getElementsByTagName('input')[0];
+		if (input.checked == true){
+			filters.push(input.id);
+		}
+	}
+
+	return filters;	
+};
+
+
+
 function getFilters() {
 	var checkbox = this;
 	var term =  getURLParameter('term');		
 	var id = checkbox.id;
 
-	var filterSession = sessionStorage.getItem("filters");
-	if (filterSession){	
-		var filters = filterSession.split(',');
-	} else {
-		var filters = [];
-	}
+	var filters = getFiltersFromDom();
 	
 	if (checkbox.checked == true){
-		var index = filters.indexOf(id);
-		if (index == -1) {
-    			filters.push(id);
-		}
-		sessionStorage.setItem("filters", filters);
-
+		filters.push(id);
 		var url = '/search?term='+term+'&filter='+filters;
 		$.get(url, function (response) {
 			document.open();
 			document.write(response);
 			document.close();
-			toggleAllFilters();
+			toggleAllFilters(filters);
 		});
-	} else {
-		var index = filters.indexOf(id);
-		if (index > -1) {
-    			filters.splice(index, 1);
-		}
-		sessionStorage.setItem("filters", filters);
-
+	} else {		
 		var url = '/search?term='+term+'&filter='+filters;
 		$.get(url, function (response) {
 			document.open();
 			document.write(response);
 			document.close();
-			togglleAllFiltersBut(id);
+			toggleAllFiltersBut(id, filters);
 		});
 	}
 };
 
 
 
-function toggleAllFilters() {
-	var filterSession = sessionStorage.getItem("filters");
-	if (filterSession){	
-		var filters = filterSession.split(',');
-	} else {
-		var filters = [];
-	}
+function toggleAllFilters(filters) {
 
 	for (i = 0; i < filters.length; i++){
 		var filter = filters[i];
@@ -67,22 +63,15 @@ function toggleAllFilters() {
 };
 
 
-function toggleAllFiltersBut(id) {
-	var filterSession = sessionStorage.getItem("filters");
-	if (filterSession){	
-		var filters = filterSession.split(',');
-	} else {
-		var filters = [];
-	}
-
+function toggleAllFiltersBut(id, filters) {
 	
+	document.getElementById(id).checked = false;
+
 	for (i = 0; i < filters.length; i++){
 		var filter = filters[i];
 		if (filter !== id) {
 			document.getElementById(filter).checked = true;
-		} else {
-			document.getElementById(id).checked = false;
-		}
+		} 
 	}
 };
 
